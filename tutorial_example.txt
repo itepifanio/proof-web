@@ -1,0 +1,21 @@
+# Prova A /\ B |- B /\ A
+
+Reset Initial.
+Require Import ProofWeb.
+Variables A B : Prop.
+Hypothesis P1 : (A /\ B).
+Theorem example_02 : (B /\ A).
+Proof.
+
+con_i.
+
+con_e2 A.
+
+exact P1.
+
+con_e1 B.
+
+exact P1.
+
+Qed.
+ 
