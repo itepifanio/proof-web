@@ -1,0 +1,30 @@
+# Provar que A /\ (B /\ C) |- (A /\ B) /\ C
+
+Reset Initial.
+Require Import ProofWeb.
+Variables A B C : Prop.
+Hypothesis P1 : A /\ (B /\ C).
+Theorem example_03 : (A /\ B) /\ C.
+Proof.
+
+con_i.
+
+con_i.
+
+con_e1(B /\ C).
+
+exact P1.
+
+con_e1 C.
+
+con_e2 A.
+
+exact P1.
+
+con_e2 B.
+
+con_e2 A.
+
+exact P1.
+
+Qed.

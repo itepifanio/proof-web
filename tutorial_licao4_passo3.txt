@@ -1,0 +1,21 @@
+# Proof A -> (A -> B) |- A -> B
+
+Reset Initial. 
+Require Import ProofWeb.
+Variables A B : Prop.
+Hypothesis P1 : A -> (A -> B).
+Theorem example_06 :  A -> B.
+Proof.
+
+imp_i h1.
+
+imp_e A.
+
+imp_e A.
+exact P1.
+
+exact h1.
+
+exact h1.
+
+Qed.

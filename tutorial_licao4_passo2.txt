@@ -1,0 +1,20 @@
+# Proof |- A -> B -> A
+
+Reset Initial.  
+Require Import ProofWeb. 
+Variables A B : Prop. 
+Theorem example_05 :  A -> (B -> A). 
+Proof.
+
+imp_i h1.
+
+imp_i h2.
+
+exact h1.
+
+Qed.
+ 
+
+ 
+
+
