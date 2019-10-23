@@ -5,7 +5,7 @@ Projeto colaborativo para reunir os exercícios, desafios e demais soluções do
 
 ## Contribuindo
 
-Veja a página de contributing
+Veja a página de [contributing](https://github.com/itepifanio/proof-web/blob/master/CONTRIBUTING.md)
 
 ## Tutoriais
 
@@ -24,4 +24,4 @@ Veja a página de contributing
 
 ## Desafios
 
-- ` defaio_0 |- (A \/ (~B ->  ~A)) `
+- ` defaio_0: |- (A \/ (~B ->  ~A)) `
