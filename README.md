@@ -1,11 +1,11 @@
-# proof-web
+# Soluções do Proof web
 
 Projeto colaborativo para reunir os exercícios, desafios e demais soluções do sistema [proof web](http://lolita.dimap.ufrn.br/proofweb/)
 
 
 ## Contribuindo
 
-Veja a página de contributing
+Veja a página de [contributing](https://github.com/itepifanio/proof-web/blob/master/CONTRIBUTING.md)
 
 ## Tutoriais
 
