@@ -1,4 +1,4 @@
-# proof-web
+# Soluções do Proof web
 
 Projeto colaborativo para reunir os exercícios, desafios e demais soluções do sistema [proof web](http://lolita.dimap.ufrn.br/proofweb/)
 
