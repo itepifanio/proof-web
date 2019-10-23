@@ -4,7 +4,6 @@ Parameter A B : Prop.
 
 Theorem c0n001 : (A -> (B -> A)).
 Proof.
-(*! prop_proof *)
 
 imp_i h1.
 imp_e A.
