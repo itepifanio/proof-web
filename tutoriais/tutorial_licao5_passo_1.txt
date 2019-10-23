@@ -1,0 +1,21 @@
+Reset Initial.
+Require Import ProofWeb.
+Variables A : Prop.
+Theorem example_07 : ~~(~~A -> A).
+Proof.
+
+neg_i h1.
+
+neg_e (~~A -> A).
+exact h1.
+
+imp_i h2.
+
+neg_e (~A).
+exact h2.
+
+neg_i h3.
+neg_e (~~A -> A).
+exact h1.
+imp_i h5.
+exact h3.
