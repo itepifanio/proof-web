@@ -24,4 +24,5 @@ Veja a página de contributing
 
 ## Desafios
 
-- ` defaio_0 |- (A \/ (~B ->  ~A)) `
+- ` desafio_0: |- (A \/ (~B ->  ~A)) `
+- ` desafio_1: |-  (((~B ->  ~A) ->  B) ->  (~A ->  B)) `

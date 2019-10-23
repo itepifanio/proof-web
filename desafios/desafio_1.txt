@@ -1,0 +1,18 @@
+Require Import ProofWeb.
+
+Parameter A B : Prop.
+
+Theorem desafio : (((~B ->  ~A) ->  B) ->  (~A ->  B)).
+Proof.
+
+imp_i h1.
+imp_i h2.
+PBC h3.
+neg_e B.
+exact h3.
+imp_e ((~B) -> (~A)).
+exact h1.
+imp_i h4.
+exact h2.
+
+Qed.
