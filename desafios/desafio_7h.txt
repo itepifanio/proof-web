@@ -1,0 +1,76 @@
+Require Import ProofWeb.
+
+Parameter A B: Prop.
+
+Hypothesis P1: (A ->  (~A \/ ~B)).
+Hypothesis P2: (~(A /\ B) ->  A).
+
+Theorem desafio : (A /\ ~B).
+Proof.
+(*! prop_proof *)
+
+con_i.
+imp_e (~(A /\ B)).
+ass P2.
+neg_i H1.
+neg_e B.
+dis_e (~A \/ ~B) H2 H3.
+imp_e A.
+ass P1.
+con_e1 B.
+ass H1.
+dis_e (~A \/ ~B) H4 H5.
+imp_e A.
+ass P1.
+imp_e (~(A/\B)).
+ass P2.
+neg_i H6.
+neg_e A.
+ass H2.
+con_e1 B.
+ass H1.
+neg_i H7.
+neg_e A.
+ass H2.
+con_e1 B.
+ass H1.
+ass H5.
+ass H3.
+con_e2 A.
+ass H1.
+neg_i H8.
+neg_e B.
+dis_e (~A \/ ~B) H9 H10.
+imp_e A.
+ass P1.
+imp_e (~(A/\B)).
+ass P2.
+neg_i H11.
+neg_e B.
+dis_e (~A \/ ~B) H12 H13.
+imp_e A.
+ass P1.
+con_e1 B.
+ass H11.
+neg_i H14.
+neg_e A.
+ass H12.
+con_e1 B.
+ass H11.
+ass H13.
+ass H8.
+neg_i H14.
+neg_e A.
+ass H9.
+imp_e (~(A /\ B)).
+ass P2.
+neg_i H15.
+neg_e A.
+ass H9.
+con_e1 B.
+ass H15.
+ass H10.
+ass H8.
+
+
+Qed.
