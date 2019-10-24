@@ -9,24 +9,24 @@ Veja a página de [contributing](https://github.com/itepifanio/proof-web/blob/ma
 
 ## Tutoriais
 
-- ` licao3_passo1: A /\ B |- B /\ A `
-- ` licao3_passo2: A /\ (B /\ C) |- (A /\ B) /\ C `
-- ` licao4_passo2: |- A -> B -> A `
-- ` licao4_passo3: A /\ (B /\ C) |- (A /\ B) /\ C `
-- ` licao5_passo1: |- ~~(~~A -> A) `
+- [licao3_passo1](https://github.com/itepifanio/proof-web/blob/master/tutoriais/licao3_passo1.txt): ` A /\ B |- B /\ A `
+- [licao3_passo2](https://github.com/itepifanio/proof-web/blob/master/tutoriais/licao3_passo2.txt): ` A /\ (B /\ C) |- (A /\ B) /\ C `
+- [licao4_passo2](https://github.com/itepifanio/proof-web/blob/master/tutoriais/licao4_passo2.txt): ` |- A -> B -> A `
+- [licao4_passo3](https://github.com/itepifanio/proof-web/blob/master/tutoriais/licao4_passo3.txt): ` A /\ (B /\ C) |- (A /\ B) /\ C `
+- [licao5_passo1](https://github.com/itepifanio/proof-web/blob/master/tutoriais/licao5_passo1.txt): ` |- ~~(~~A -> A) `
 
 ## Exercícios
 
-- ` c0n000: |- A -> A `
-- ` c0n001: (A -> (B -> A)) `
-- ` c0n002: (A -> B), (B -> C) |- (A -> C)`
-- ` c0n003: (A -> (B -> C)), (A -> B) |- (A -> C) `
-- ` c0n004: ((A -> B) -> (A -> C)) |- (A -> (B -> C)) `
+- [c0n000](https://github.com/itepifanio/proof-web/blob/master/exercicios/c0n000.v): ` |- A -> A `
+- [c0n001](https://github.com/itepifanio/proof-web/blob/master/exercicios/c0n001.v): ` (A -> (B -> A)) `
+- [c0n002](https://github.com/itepifanio/proof-web/blob/master/exercicios/c0n002.v): ` (A -> B), (B -> C) |- (A -> C)`
+- [c0n003](https://github.com/itepifanio/proof-web/blob/master/exercicios/c0n003.v): ` (A -> (B -> C)), (A -> B) |- (A -> C) `
+- [c0n004](https://github.com/itepifanio/proof-web/blob/master/exercicios/c0n004.v): ` ((A -> B) -> (A -> C)) |- (A -> (B -> C)) `
 
 ## Desafios
 
-- ` desafio_0: |- (A \/ (~B ->  ~A)) `
-- ` desafio_1: |- (((~B ->  ~A) ->  B) ->  (~A ->  B)) `
-- ` desafio_2: |- (((A <-> ~B) <-> ~A) <-> B) `
-- ` desafio_3: |- ((A ->  C) ->  (((A ->  B) ->  C) ->  C)) `
-- ` desafio_4: |- (((((A ->  B) ->  (C ->  False)) ->  D) ->  E) ->  ((E ->  A) ->  (C ->  A))) `
+- [desafio_0](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_0.txt): ` |- (A \/ (~B ->  ~A)) `
+- [desafio_1](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_1.txt): ` |- (((~B ->  ~A) ->  B) ->  (~A ->  B)) `
+- [desafio_2](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_2.txt): ` |- (((A <-> ~B) <-> ~A) <-> B) `
+- [desafio_3](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_3.txt): ` |- ((A ->  C) ->  (((A ->  B) ->  C) ->  C)) `
+- [desafio_4](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_0.txt): ` |- (((((A ->  B) ->  (C ->  False)) ->  D) ->  E) ->  ((E ->  A) ->  (C ->  A))) `
