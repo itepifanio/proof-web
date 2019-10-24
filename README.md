@@ -9,10 +9,11 @@ Veja a página de [contributing](https://github.com/itepifanio/proof-web/blob/ma
 
 ## Tutoriais
 
-- ` licao_3_passo_1: A /\ B |- B /\ A `
-- ` licao_3_passo_2: A /\ (B /\ C) |- (A /\ B) /\ C `
-- ` licao_4_passo_2: |- A -> B -> A `
-- ` licao_4_passo_3: A /\ (B /\ C) |- (A /\ B) /\ C `
+- ` licao3_passo1: A /\ B |- B /\ A `
+- ` licao3_passo2: A /\ (B /\ C) |- (A /\ B) /\ C `
+- ` licao4_passo2: |- A -> B -> A `
+- ` licao4_passo3: A /\ (B /\ C) |- (A /\ B) /\ C `
+- ` licao5_passo1: |- ~~(~~A -> A) `
 
 ## Exercícios
 
@@ -25,4 +26,5 @@ Veja a página de [contributing](https://github.com/itepifanio/proof-web/blob/ma
 ## Desafios
 
 - ` desafio_0: |- (A \/ (~B ->  ~A)) `
-- ` desafio_1: |-  (((~B ->  ~A) ->  B) ->  (~A ->  B)) `
+- ` desafio_1: |- (((~B ->  ~A) ->  B) ->  (~A ->  B)) `
+- ` desafio_2: |- (((A <-> ~B) <-> ~A) <-> B) `
