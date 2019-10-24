@@ -1,0 +1,38 @@
+Require Import ProofWeb.
+
+Parameter A B C D E: Prop.
+
+Hypothesis P1: ~(~~(~(A ->  E) ->  B) \/ ~~(C \/ (D ->  False))).
+
+Theorem desafio : ~(~~B \/ ~D).
+Proof.
+
+neg_i h1.
+neg_e (~~(~(A ->  E) ->  B) \/ ~~(C \/ (D ->  False))).
+exact P1.
+dis_i1.
+neg_i h2.
+neg_e (~(A -> E) -> B).
+exact h2.
+imp_i h3.
+PBC h4.
+neg_e (~~(~(A ->  E) ->  B) \/ ~~(C \/ (D ->  False))).
+exact P1.
+dis_i2.
+neg_i h5.
+neg_e (C \/ (D -> False)).
+exact h5.
+dis_i2.
+imp_i h6.
+neg_e B.
+exact h4.
+neg_e D.
+dis_e ((~(~B)) \/ (~(D))) h7 h8.
+exact h1.
+neg_e (~B).
+exact h7.
+exact h4.
+exact h8.
+exact h6.
+
+Qed.
