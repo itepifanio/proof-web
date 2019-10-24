@@ -26,4 +26,5 @@ Veja a página de [contributing](https://github.com/itepifanio/proof-web/blob/ma
 ## Desafios
 
 - ` desafio_0: |- (A \/ (~B ->  ~A)) `
-- ` desafio_1: |-  (((~B ->  ~A) ->  B) ->  (~A ->  B)) `
+- ` desafio_1: |- (((~B ->  ~A) ->  B) ->  (~A ->  B)) `
+- ` desafio_2: |- (((A <-> ~B) <-> ~A) <-> B) `
