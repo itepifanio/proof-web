@@ -1,0 +1,83 @@
+Require Import ProofWeb.
+
+Parameter A B C: Prop.
+
+Hypothesis P1: (A <-> ((A /\ ~B) ->  C)).
+Hypothesis P2: (B <-> ~A).
+
+Theorem desafio : (C /\ (A /\ ~B)).
+Proof.
+(*! prop_proof *)
+
+con_i.
+imp_e (A /\ ~B).
+iff_e1 A.
+ass P1.
+PBC H1.
+neg_e A.
+ass H1.
+iff_e2 ((A /\ ~B) -> C).
+ass P1.
+imp_i H2.
+
+imp_e (A /\ ~B).
+iff_e1 A.
+ass P1.
+PBC H3.
+neg_e A.
+ass H1.
+con_e1 (~B).
+ass H2.
+ass H2.
+con_i.
+iff_e2 ((A /\ ~B) -> C). 
+ass P1.
+imp_i H3.
+imp_e (A /\ ~B).
+iff_e1 A.
+ass P1.
+con_e1 (~B).
+ass H3.
+ass H3.
+neg_i H4.
+neg_e A.
+iff_e1 B.
+ass P2.
+ass H4.
+iff_e2 ((A /\ ~B) ->  C).
+ass P1.
+imp_i H5.
+imp_e (A /\ ~B).
+iff_e1 (A).
+ass P1.
+con_e1 (~B).
+ass H5.
+ass H5.
+con_i.
+iff_e2 ((A /\ ~B) ->  C).
+ass P1.
+imp_i H6.
+imp_e (A /\ ~B).
+iff_e1 (A).
+ass P1.
+con_e1 (~B).
+ass H6.
+ass H6.
+neg_i H7.
+neg_e A.
+iff_e1 (B).
+ass P2.
+ass H7.
+iff_e2 ((A /\ ~B) ->  C).
+ass P1.
+imp_i H8.
+imp_e (A /\ ~B).
+iff_e1 A.
+ass P1.
+con_e1 (~B).
+ass H8.
+ass H8.
+
+
+
+Qed.
