@@ -1,0 +1,49 @@
+Require Import ProofWeb.
+
+Parameter A B C D E: Prop.
+
+Theorem desafio : (((((A ->  B) ->  (D ->  C)) ->  C) ->  E) ->  ((E ->  A) ->  (D ->  A))).
+Proof.
+
+PBC h1.
+imp_e (((((A ->  B) ->  (D ->  C)) ->  C) ->  E) ->  ((E ->  A) ->  (D ->  A))).
+imp_i h2.
+imp_e (((((A ->  B) ->  (D ->  C)) ->  C) ->  E) ->  ((E ->  A) ->  (D ->  A))).
+exact h1.
+exact h2.
+imp_i h3.
+PBC h4.
+imp_e ((E -> A) -> D -> A).
+exact h4.
+imp_i h5.
+PBC h6.
+imp_e (D -> A).
+exact h6.
+imp_i h7.
+PBC h8.
+neg_e A.
+exact h8.
+imp_e E.
+exact h5.
+imp_e (((A -> B) -> D -> C) -> C).
+exact h3.
+PBC h9.
+imp_e (((A -> B) -> D -> C) -> C).
+exact h9.
+imp_i h10.
+imp_e D.
+imp_e (A -> B).
+exact h10.
+PBC h11.
+imp_e (A -> B).
+exact h11.
+imp_i h12.
+PBC h13.
+imp_e B.
+exact h13.
+neg_e A.
+exact h8.
+exact h12.
+exact h7.
+
+Qed.
