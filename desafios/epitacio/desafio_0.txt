@@ -1,0 +1,23 @@
+
+Require Import ProofWeb.
+
+Parameter A B : Prop.
+
+Theorem desafio : (A \/ (A ->  B)).
+Proof.
+(*! prop_proof *)
+PBC h0.
+neg_e (A \/ (A -> B)).
+exact h0.
+dis_i1.
+PBC h1.
+neg_e (A \/ (A -> B)).
+exact h0.
+dis_i2.
+imp_i h3.
+imp_e A.
+neg_e A.
+exact h1.
+exact h3.
+exact h3.
+Qed.

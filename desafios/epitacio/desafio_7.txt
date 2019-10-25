@@ -1,0 +1,81 @@
+Require Import ProofWeb.
+
+Parameter A B C: Prop.
+
+Hypothesis P1: (A <-> (B /\ C)).
+Hypothesis P2: (B <-> (~A /\ C)).
+
+Theorem desafio : (~A /\ (~B /\ ~C)).
+Proof.
+(*! prop_proof *)
+con_i.
+neg_i h00.
+neg_e A.
+con_e1 C.
+iff_e1 B.
+exact P2.
+PBC h01.
+neg_e B.
+exact h01.
+con_e1 C.
+iff_e1 A.
+exact P1.
+exact h00.
+exact h00.
+con_i.
+neg_i h02.
+neg_e A.
+con_e1 C.
+iff_e1 B.
+exact P2.
+exact h02.
+PBC h03.
+neg_e A.
+exact h03.
+iff_e2 (B /\ C).
+exact P1.
+con_i.
+exact h02.
+neg_e A.
+exact h03.
+iff_e2 (B /\ C).
+exact P1.
+con_i.
+exact h02.
+con_e2 (~A).
+iff_e1 B.
+exact P2.
+exact h02.
+neg_i h03.
+neg_e A.
+con_e1 C.
+iff_e1 B.
+exact P2.
+con_e1 C. 
+iff_e1 A.
+exact P1.
+PBC h04.
+neg_e A.
+exact h04.
+iff_e2 (B /\ C).
+exact P1.
+con_i.
+iff_e2 (~A /\ C).
+exact P2.
+con_i.
+exact h04.
+exact h03.
+exact h03.
+PBC h05.
+neg_e A.
+exact h05.
+iff_e2 (B /\ C).
+exact P1.
+con_i.
+iff_e2 (~A /\ C).
+exact P2.
+con_i.
+exact h05.
+exact h03.
+exact h03.
+Qed.
