@@ -37,4 +37,4 @@ Veja a página de [contributing](https://github.com/itepifanio/proof-web/blob/ma
 - [desafio 9](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_9.txt): ` |- (~(A \/ B) <-> ~(~A ->  ~(A <-> B))) `
 - [desafio 10](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_10.txt): ` (A ->  (~B ->  ~A)), ((~B ->  ~A) ->  A) |- (A /\ B) `
 - [desafio 11](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_11.txt): ` (~A \/ (~C ->  B)), ((B \/ C) ->  A), ((C ->  A) ->  ~B), ((~A /\ C) ->  B) |- (~B /\ ((A ->  C) /\ (C ->  A))) `
-[desafio 12](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_12.txt): `(~A -> B), (~B / C), (~D -> ~C), (D -> (B /\ E)), ((E /\ C) -> ~E) |- ((F / A) -> A)`
+- [desafio 12](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_12.txt): `(~A -> B), (~B / C), (~D -> ~C), (D -> (B /\ E)), ((E /\ C) -> ~E) |- ((F / A) -> A)`
