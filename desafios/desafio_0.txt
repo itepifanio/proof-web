@@ -4,29 +4,12 @@ Parameter A B : Prop.
 
 Theorem desafio : (A \/ (~B ->  ~A)).
 Proof.
-
-PBC h1.
-neg_e (A \/ ((~B) -> (~A))).
+dis_e(A \/ ~A) h1 h2.
+LEM.
+dis_i1.
 exact h1.
 dis_i2.
-imp_i h2.
-neg_i h3.
-neg_e B.
+imp_i h3.
 exact h2.
-neg_e (A).
-imp_e (~B).
-dis_e (A \/ ((~B) -> (~A))) h5 h6.
-dis_i1.
-exact h3.
-neg_e (A \/ ((~B) -> (~A))).
-exact h1.
-dis_i1.
-exact h5.
-neg_e (A \/ ((~B) -> (~A))).
-exact h1.
-dis_i2.
-exact h6.
-exact h2.
-exact h3.
 
 Qed.
