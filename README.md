@@ -38,3 +38,13 @@ Veja a página de [contributing](https://github.com/itepifanio/proof-web/blob/ma
 - [desafio 10](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_10.txt): ` (A ->  (~B ->  ~A)), ((~B ->  ~A) ->  A) |- (A /\ B) `
 - [desafio 11](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_11.txt): ` (~A \/ (~C ->  B)), ((B \/ C) ->  A), ((C ->  A) ->  ~B), ((~A /\ C) ->  B) |- (~B /\ ((A ->  C) /\ (C ->  A))) `
 - [desafio 12](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_12.txt): `(~A -> B), (~B / C), (~D -> ~C), (D -> (B /\ E)), ((E /\ C) -> ~E) |- ((F / A) -> A)`
+- [desafio 13](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_13.txt): `(A ->  B) \/ (~A ->  ~B)`
+- [desafio 14](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_14.txt): `(A ->  C) ->  (((~B ->  ~A) ->  C) ->  C)`
+- [desafio 15](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_15.txt): `((A ->  B) ->  C) ->  (D ->  ((B ->  (C ->  E)) ->  (B ->  E)))`
+- [desafio 16](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_16.txt): `((~A <-> ~B) <-> A) <-> B`
+- [desafio 17](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_17.txt): `((~A <-> ~B) <-> A) <-> B`
+- [desafio 18](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_18.txt): `(~A ->  B), (~B \/ C), (~D ->  ~C), (D ->  (B /\ E)), ((E /\ C) ->  ~E) |- (F \/ A) ->  A`
+- [desafio 19](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_19.txt): `(~(D \/ A) ->  ~B), ((A ->  B) ->  B) |- (A \/ D)`
+- [desafio 20](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_20.txt): `(A ->  (~B ->  ~A)), ((~B ->  ~A) ->  A) |- (A /\ B)`
+- [desafio 21](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_21.txt): `(~~A ->  ~(A \/ B)), ((~A /\ ~B) ->  A) |- (~A /\ B)`
+- [desafio 22](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_22.txt): `((~B ->  C) \/ ~A), (~A ->  ~((C ->  B) ->  B)), (B ->  ~(~C ->  A)), (~B ->  (A \/ C))  |- (A /\ (~B /\ C))`

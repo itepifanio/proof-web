@@ -1,0 +1,49 @@
+Require Import ProofWeb.
+
+Parameter A B: Prop.
+
+Theorem desafio : (((~A <-> ~B) <-> A) <-> B).
+Proof.
+(*! prop_proof *)
+iff_i h1 h2.
+PBC h.
+neg_e A.
+iff_e2 (~ B).
+iff_i h3 h4.
+exact h.
+neg_i h2.
+neg_e A.
+iff_e2 (~B).
+iff_e2 (A).
+exact h1.
+exact h2.
+exact h.
+exact h2.
+exact h.
+iff_e1 (~ A <-> ~B).
+exact h1.
+iff_i h2 h3.
+exact h.
+neg_i h4.
+neg_e A.
+iff_e2 (~B).
+iff_e2 A.
+exact h1.
+exact h4.
+exact h.
+exact h4.
+iff_i h3 h4.
+PBC h1.
+neg_e B.
+iff_e1 (~A).
+exact h3.
+exact h1.
+exact h2.
+iff_i h5 h6.
+neg_e A.
+exact h5.
+exact h4.
+neg_e B.
+exact h6.
+exact h2.
+Qed.
