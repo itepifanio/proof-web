@@ -41,3 +41,13 @@ Veja a página de [contributing](https://github.com/itepifanio/proof-web/blob/ma
 - [desafio 13](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_13.txt): `(((A <-> B) <-> ~A) <-> ~B)`
 - [desafio 14](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_14.txt): `(~~A ->  (B \/ C)), (B ->  (~D \/ E)), (~C \/ (D ->  ~~F)), (A /\ ~(~~E \/ ~~F)) |- (~~~D)`
 - [desafio 15](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_15.txt): `((~A ->  A) <-> (~B ->  ~A)) |- (A /\ B)`
+- [desafio 20](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_20.txt): `(A ->  B) \/ (~A ->  ~B)`
+- [desafio 21](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_21.txt): `(A ->  C) ->  (((~B ->  ~A) ->  C) ->  C)`
+- [desafio 22](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_22.txt): `((A ->  B) ->  C) ->  (D ->  ((B ->  (C ->  E)) ->  (B ->  E)))`
+- [desafio 23](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_23.txt): `((~A <-> ~B) <-> A) <-> B`
+- [desafio 24](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_24.txt): `((~A <-> ~B) <-> A) <-> B`
+- [desafio 25](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_25.txt): `(~A ->  B), (~B \/ C), (~D ->  ~C), (D ->  (B /\ E)), ((E /\ C) ->  ~E) |- (F \/ A) ->  A`
+- [desafio 26](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_26.txt): `(~(D \/ A) ->  ~B), ((A ->  B) ->  B) |- (A \/ D)`
+- [desafio 27](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_27.txt): `(A ->  (~B ->  ~A)), ((~B ->  ~A) ->  A) |- (A /\ B)`
+- [desafio 28](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_28.txt): `(~~A ->  ~(A \/ B)), ((~A /\ ~B) ->  A) |- (~A /\ B)`
+- [desafio 29](https://github.com/itepifanio/proof-web/blob/master/desafios/desafio_29.txt): `((~B ->  C) \/ ~A), (~A ->  ~((C ->  B) ->  B)), (B ->  ~(~C ->  A)), (~B ->  (A \/ C))  |- (A /\ (~B /\ C))`
