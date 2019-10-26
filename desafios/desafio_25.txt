@@ -1,0 +1,47 @@
+Require Import ProofWeb.
+
+Parameter A B C D E F: Prop.
+
+Hypothesis P1: (~A ->  B).
+Hypothesis P2: (~B \/ C).
+Hypothesis P3: (~D ->  ~C).
+Hypothesis P4: (D ->  (B /\ E)).
+Hypothesis P5: ((E /\ C) ->  ~E).
+
+Theorem desafio : ((F \/ A) ->  A).
+Proof.
+(*! prop_proof *)
+imp_i h.
+dis_e (~B \/ C) h1 h2.
+exact P2.
+PBC h3.
+neg_e B.
+exact h1.
+imp_e (~A).
+exact P1.
+exact h3.
+PBC h3.
+neg_e E.
+imp_e (E /\ C).
+exact P5.
+con_i.
+con_e2 B.
+imp_e D.
+exact P4.
+PBC h4.
+neg_e C.
+imp_e (~D).
+exact P3.
+exact h4.
+exact h2.
+exact h2.
+con_e2 B.
+imp_e D.
+exact P4.
+PBC h1.
+neg_e C.
+imp_e (~D).
+exact P3.
+exact h1.
+exact h2.
+Qed.
