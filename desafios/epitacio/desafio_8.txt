@@ -1,0 +1,81 @@
+Require Import ProofWeb.
+
+Parameter A B C: Prop.
+
+Hypothesis P1: (~A \/ (C /\ B)).
+Hypothesis P2: ((((B ->  C) \/ ~B) /\ ((~C ->  ~B) ->  B)) ->  A).
+Hypothesis P3: ((C ->  A) ->  ~B).
+Hypothesis P4: ((~A /\ C) ->  B).
+
+Theorem desafio : (~A /\ (~B /\ ~C)).
+Proof.
+(*! prop_proof *)
+con_i.
+dis_e (~A \/ (C /\ B)) h1 h2.
+exact P1.
+exact h1.
+neg_i h00.
+neg_e B.
+imp_e (C -> A).
+exact P3.
+imp_i h01.
+exact h00.
+con_e2 C.
+exact h2.
+PBC h00.
+neg_e (~B /\ ~C).
+exact h00.
+con_i.
+imp_e (C -> A).
+exact P3.
+imp_i h3.
+imp_e (((B -> C) \/ ~B) /\ ((~C -> ~B) -> B)).
+exact P2.
+con_i.
+dis_i1.
+imp_i h4.
+exact h3.
+imp_i h5.
+con_e2 C.
+dis_e (~A \/ (C /\ B)) h6 h7.
+exact P1.
+con_i.
+exact h3.
+imp_e (~A /\ C).
+exact P4.
+con_i.
+exact h6.
+exact h3.
+exact h7.
+neg_i h01.
+neg_e A.
+dis_e (~A \/ (C /\ B)) h8 h9.
+exact P1.
+exact h8.
+neg_i h02.
+neg_e B.
+imp_e (C -> A).
+exact P3.
+imp_i h10.
+exact h02.
+con_e2 C.
+exact h9.
+imp_e (((B -> C) \/ ~B) /\ ((~C -> ~B) -> B)).
+exact P2.
+con_i.
+dis_i1.
+imp_i h4.
+exact h01.
+imp_i h5.
+con_e2 C.
+dis_e (~A \/ (C /\ B)) h6 h7.
+exact P1.
+con_i.
+exact h01.
+imp_e (~A /\ C).
+exact P4.
+con_i.
+exact h6.
+exact h01.
+exact h7.
+Qed.
