@@ -1,0 +1,117 @@
+Require Import ProofWeb.
+
+Parameter A B C D E: Prop.
+
+Hypothesis P1: ((~~B ->  A) \/ ~E).
+Hypothesis P2: (~C ->  (((B ->  E) ->  A) ->  A)).
+Hypothesis P3: ((B \/ ~~D) ->  (C ->  A)).
+
+Theorem desafio : (D ->  (~B \/ A)).
+Proof.
+
+PBC h1.
+imp_e (D -> ~ B \/ A).
+exact h1.
+imp_i h2.
+PBC h3.
+imp_e (~B \/ A).
+exact h3.
+dis_i2.
+imp_e ((B ->  E) ->  A).
+PBC h4.
+imp_e (((B ->  E) ->  A) -> A).
+exact h4.
+imp_i h5.
+imp_e (~(~B)).
+PBC h6.
+imp_e (~ ~ B -> A).
+exact h6.
+imp_i h7.
+PBC h8.
+imp_e A.
+exact h8.
+imp_e ((B ->  E) ->  A).
+imp_e (~C).
+exact P2.
+PBC h9.
+imp_e (~C).
+exact h9.
+neg_e A.
+exact h8.
+imp_e C.
+imp_e (B \/ ~~D).
+exact P3.
+dis_i2.
+neg_i h10.
+neg_e D.
+exact h10.
+exact h2.
+PBC h11.
+imp_e (C).
+exact h11.
+neg_e (~C).
+exact h9.
+exact h11.
+exact h5.
+PBC h12.
+imp_e (~~B).
+exact h12.
+neg_i h13.
+neg_e B.
+PBC h14.
+imp_e (~B).
+exact h14.
+neg_e (~B).
+exact h14.
+exact h13.
+dis_e ((B) \/ A) h15 h16.
+dis_i2.
+imp_e (B -> E).
+exact h5.
+imp_i h17.
+neg_e B.
+exact h13.
+exact h17.
+exact h15.
+neg_e (~ B \/ A).
+exact h3.
+dis_i2.
+exact h16.
+imp_i h17.
+imp_e C.
+imp_e (B \/ (~(~D))).
+exact P3.
+dis_i2.
+negneg_i.
+exact h2.
+PBC h18.
+imp_e C.
+exact h18.
+neg_e A.
+neg_i h19.
+neg_e ((~ B) \/ A).
+exact h3.
+dis_i2.
+exact h19.
+PBC h20.
+imp_e A.
+exact h20.
+neg_e ((~B) \/ A).
+exact h3.
+dis_i1.
+neg_i h24.
+neg_e A.
+exact h20.
+imp_e (~(~B)).
+dis_e (((~(~B)) -> A) \/ (~E)) h25 h26.
+exact P1.
+exact h25.
+neg_e E.
+exact h26.
+imp_e B.
+exact h17.
+exact h24.
+negneg_i.
+exact h24.
+
+Qed.

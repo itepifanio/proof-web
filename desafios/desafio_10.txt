@@ -1,0 +1,50 @@
+Require Import ProofWeb.
+
+Parameter A B: Prop.
+
+Hypothesis P1: (A ->  (~B ->  ~A)).
+Hypothesis P2: ((~B ->  ~A) ->  A).
+
+Theorem desafio : (A /\ B).
+Proof.
+con_i.
+imp_e (~B -> ~A).
+exact P2.
+imp_i h1.
+neg_i h2.
+neg_e A.
+imp_e (~B).
+imp_e A.
+exact P1.
+exact h2.
+exact h1.
+exact h2.
+PBC h3.
+
+
+neg_e A.
+imp_e (~B).
+imp_e (A).
+exact P1.
+imp_e(~B -> ~A).
+exact P2.
+imp_i h4.
+neg_i h5.
+neg_e A.
+imp_e (~B).
+imp_e A.
+exact P1.
+exact h5.
+exact h4.
+exact h5.
+exact h3.
+
+PBC h6.
+imp_e A.
+exact h6.
+imp_e (~B ->  ~A).
+exact P2.
+imp_i h7.
+exact h6.
+
+Qed.
