@@ -1,0 +1,155 @@
+Require Import ProofWeb.
+
+Parameter A B C: Prop.
+
+Hypothesis P1: (A <-> ((A \/ B) ->  C)).
+Hypothesis P2: (B <-> ((~A \/ ~B) ->  C)).
+
+Theorem desafio : (C /\ (A /\ B)).
+Proof.
+
+con_i.
+imp_e (A \/ B) .
+iff_e1 A.
+exact P1.
+PBC h2.
+imp_e A.
+exact h2.
+iff_e2 ((A \/ B) -> C).
+exact P1.
+imp_i h3.
+imp_e ((~A) \/ (~B)).
+iff_e1 B.
+exact P2.
+PBC h4.
+imp_e B.
+exact h4.
+iff_e2 (((~A) \/ (~B)) -> C).
+exact P2.
+imp_i h5.
+neg_e A.
+exact h2.
+dis_e (A \/ B) h6 h7.
+exact h3.
+exact h6.
+neg_e B.
+exact h4.
+exact h7.
+PBC h8.
+imp_e (~ A \/ ~ B).
+exact h8.
+dis_e (A \/ B) h9 h10.
+exact h3.
+neg_e A.
+exact h2.
+exact h9.
+dis_i1.
+exact h2.
+PBC h10.
+imp_e (A \/ B).
+exact h10.
+dis_i2.
+iff_e2 (((~A) \/ (~B)) -> C).
+exact P2.
+imp_i h11.
+imp_e (A \/ B).
+iff_e1 A.
+exact P1.
+PBC h12.
+neg_e (A \/ B).
+exact h10.
+dis_i1.
+iff_e2 ((A \/ B) -> C).
+exact P1.
+imp_i h13.
+neg_e (A \/ B).
+exact h10.
+exact h13.
+dis_i1.
+iff_e2 ((A \/ B) -> C) .
+exact P1.
+imp_i h14.
+neg_e (A \/ B).
+exact h10.
+exact h14.
+PBC h100.
+imp_e (A /\ B).
+exact h100.
+con_i.
+iff_e2 ((A \/ B) -> C).
+exact P1.
+imp_i h15.
+PBC h99.
+imp_e C.
+exact h99.
+imp_e ((~A) \/ (~B)).
+iff_e1 B.
+exact P2.
+PBC h16.
+imp_e B.
+exact h16.
+iff_e2 (((~A) \/ (~B)) -> C).
+exact P2.
+imp_i h17.
+imp_e (A \/ B).
+iff_e1 A.
+exact P1.
+PBC h18.
+imp_e A.
+exact h18.
+dis_e (A \/ B) h19 h20.
+exact h15.
+exact h19.
+neg_e B.
+exact h16.
+exact h20.
+exact h15.
+dis_i1.
+neg_i h21.
+neg_e C.
+exact h99.
+imp_e ((A \/ B)).
+iff_e1 A.
+exact P1.
+exact h21.
+exact h15.
+PBC h22.
+imp_e B.
+exact h22.
+iff_e2 (((~A) \/ (~B)) -> C).
+exact P2.
+imp_i h23.
+imp_e (A \/ B).
+iff_e1 A.
+exact P1.
+PBC h102.
+imp_e A.
+exact h102.
+iff_e2 ((A \/ B) -> C).
+exact P1.
+imp_i h24.
+neg_e B.
+exact h22.
+dis_e (A \/ B) h25 h26.
+exact h24.
+neg_e A.
+exact h102.
+neg_e A.
+exact h102.
+exact h25.
+exact h26.
+PBC h27.
+imp_e (A \/ B).
+exact h27.
+dis_i1.
+PBC h28.
+imp_e A.
+exact h28.
+iff_e2 ((A \/ B) ->  C).
+exact P1.
+imp_i h1.
+neg_e (A \/ B).
+exact h27.
+exact h1.
+
+Qed.
