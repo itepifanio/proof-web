@@ -1,0 +1,40 @@
+Require Import ProofWeb.
+
+(* Try to Prove it with Natural Deduction: *)
+
+Parameter A B C: Prop.
+
+Hypothesis P0 : ( ( ~ B ) /\ C ).
+
+Hypothesis P1 : ( ~ ( ( ( A -> C ) \/ C ) /\ A ) ).
+
+Theorem T0 : ( B \/ ( ( A -> B ) \/ ( ~ A ) ) ).
+
+Proof.
+
+PBC h1.
+imp_e ( B \/ ( ( A -> B ) \/ ( ~ A ) ) ).
+exact h1.
+dis_i2.
+PBC h2.
+imp_e ((A -> B) \/ ~ A).
+exact h2.
+dis_i1.
+PBC h3.
+imp_e (A -> B).
+exact h3.
+imp_i h4.
+PBC h5.
+neg_e ( ( ( A -> C ) \/ C ) /\ A )  .
+exact P1.
+con_i.
+dis_i2.
+PBC h6.
+imp_e C.
+exact h6.
+con_e2 (~B).
+exact P0.
+exact h4.
+
+
+Qed.

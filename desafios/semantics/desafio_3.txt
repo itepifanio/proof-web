@@ -1,0 +1,69 @@
+Require Import Semantics.
+
+(* Try to Refute it with Semantics: *)
+
+Parameter A B C D E: Prop.
+
+(* Edit ||-- or ||-/- on Hypothesis.*)
+
+Hypothesis P0 : (v ||-/- A).
+
+Hypothesis P1 : (v ||-/- B).
+
+Hypothesis P2 : (v ||-- C).
+
+Hypothesis P3 : (v ||-/- D).
+
+Hypothesis P4 : (v ||-- E).
+
+Theorem T0 : (v ||-/-  ( ( ( ( ~ ( A /\ ( ~ D ) ) ) /\ C ) /\ ( ( ~ ( ( D <-> A ) /\ B ) ) /\ ( ~ D ) ) /\ ( B <-> ( ~ ( ( C /\ ( B -> E ) ) <-> E ) ) ) /\ ( ( ( ( D \/ A ) <-> C ) <-> ( C <-> A ) ) /\ C ) ) -> ( ( A /\ ( ( C <-> A ) /\ A ) ) <-> ( ~ A ) ) ) ).
+
+Proof.
+
+impF.
+conjT.
+conjT.
+negT.
+Focus 2.
+ass P2.
+Unfocus.
+Focus 2.
+conjT.
+conjT.
+negT.
+Focus 2.
+negT.
+ass P3.
+Focus 3.
+conjT.
+iffFF.
+ass P1.
+negF.
+iffTT.
+conjT.
+ass P2.
+impT1.
+ass P1.
+ass P4.
+conjT.
+iffFF.
+iffFT.
+disjF.
+ass P3.
+ass P0.
+ass P2.
+iffTF.
+ass P2.
+ass P0.
+ass P2.
+conjF1.
+ass P0.
+conjF2.
+ass P1.
+iffFT.
+conjF1.
+ass P0.
+negT.
+ass P0.
+
+Qed.

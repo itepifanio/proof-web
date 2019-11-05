@@ -1,0 +1,48 @@
+Require Import ProofWeb.
+
+(* Try to Prove it with Natural Deduction: *)
+
+Parameter A B C D E: Prop.
+
+Hypothesis P0 : ( ( C \/ ( B \/ A ) ) /\ ( D /\ C ) ).
+
+Hypothesis P1 : ( ( ~ ( ~ ( B -> A ) ) ) \/ ( A <-> D ) ).
+
+Hypothesis P2 : ( ( ( D -> C ) /\ ( B /\ E ) ) /\ ( B /\ E ) ).
+
+Theorem T0 : ( ( C -> A ) /\ ( E <-> E ) ).
+
+Proof.
+
+con_i.
+imp_i h1.
+PBC h2.
+imp_e A.
+exact h2.
+dis_e ( ( ~ ( ~ ( B -> A ) ) ) \/ ( A <-> D ) ) h3 h4.
+exact P1.
+neg_e (~(B -> A)).
+exact h3.
+neg_i h4.
+neg_e A.
+exact h2.
+imp_e B.
+exact h4.
+con_e1 E.
+con_e2 (( ( D -> C ) /\ ( B /\ E ) )).
+exact P2.
+iff_e2 D.
+exact h4.
+con_e1 C.
+con_e2 ( C \/ ( B \/ A ) ) .
+exact P0.
+iff_i h1 h2.
+con_e2 B.
+con_e2 ( ( D -> C ) /\ ( B /\ E ) ).
+exact P2.
+con_e2 B. 
+con_e2 ( ( D -> C ) /\ ( B /\ E ) ).
+exact P2.
+
+
+Qed.

@@ -1,0 +1,50 @@
+Require Import Semantics.
+
+(* Try to Refute it with Semantics: *)
+
+Parameter A B C D: Prop.
+
+(* Edit ||-- or ||-/- on Hypothesis.*)
+
+Hypothesis P0 : (v ||-/- A).
+
+Hypothesis P1 : (v ||-- B).
+
+Hypothesis P2 : (v ||-- C).
+
+Hypothesis P3 : (v ||-/- D).
+
+Theorem T1 : (v ||-/-  ( ( ( ~ ( ~ ( C /\ B ) ) ) /\ ( ~ ( ( B <-> D ) <-> ( B -> B ) ) ) /\ ( ( C <-> ( A \/ A ) ) <-> ( B <-> A ) ) ) -> ( D <-> ( ( A /\ B ) -> B ) ) ) ).
+
+Proof.
+
+impF.
+conjT.
+negT.
+negF.
+conjT.
+ass P2.
+ass P1.
+conjT.
+negT.
+iffFT.
+iffTF.
+ass P1.
+ass P3.
+impT2.
+ass P1.
+iffFF.
+iffTF.
+ass P2.
+disjF.
+ass P0.
+ass P0.
+iffTF.
+ass P1.
+ass P0.
+iffFT.
+ass P3.
+impT2.
+ass P1.
+
+Qed.
